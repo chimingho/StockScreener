@@ -1,0 +1,24 @@
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.exe.config
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\obj\Debug\StockScreener.csprojResolveAssemblyReference.cache
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.exe
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.pdb
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.exe
+c:\users\ho\documents\visual studio 2012\Projects\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.pdb
+C:\Users\ho\Documents\Visual Studio 2012\Projects\StockScreener\StockScreener\bin\Debug\EntityFramework.dll
+C:\Users\ho\Documents\Visual Studio 2012\Projects\StockScreener\StockScreener\bin\Debug\EntityFramework.xml
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.exe.config
+D:\GoogleDrive\Code\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.exe
+D:\GoogleDrive\Code\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.pdb
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.exe
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.pdb
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\EntityFramework.dll
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\EntityFramework.xml
+C:\Users\chiming\Google Drive\Code\StockScreener\StockScreener\bin\Debug\HoAssetManagement.StockScreener.exe.config
+C:\Users\chiming\Google Drive\Code\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.exe
+C:\Users\chiming\Google Drive\Code\StockScreener\StockScreener\obj\Debug\HoAssetManagement.StockScreener.pdb
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\log4net.dll
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\log4net.xml
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\Newtonsoft.Json.dll
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\Newtonsoft.Json.pdb
+D:\GoogleDrive\Code\StockScreener\StockScreener\bin\Debug\Newtonsoft.Json.xml
+D:\GoogleDrive\Code\StockScreener\StockScreener\obj\Debug\StockScreener.csprojResolveAssemblyReference.cache

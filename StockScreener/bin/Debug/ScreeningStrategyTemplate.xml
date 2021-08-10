@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreeningStrategy>
+  <ScreeningCriteria file="ScreeningCriteriaVal.xml" logic=""></ScreeningCriteria>
+  <ScreeningCriteria file="ScreeningCriteriaPeg.xml" logic="|"></ScreeningCriteria>
+  <!-- ScreeningCriteria file="ScreeningCriteriaTemplate.xml" logic="[&#38;][|][^][!]"></ScreeningCriteria -->
+
+
+</ScreeningStrategy>
+

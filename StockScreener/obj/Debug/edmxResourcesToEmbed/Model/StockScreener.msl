@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StockScreenerModelStoreContainer" CdmEntityContainer="StockScreenerEntities">
+    <EntitySetMapping Name="Industries">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.Industry)">
+        <MappingFragment StoreEntitySet="Industries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SectorFeed" ColumnName="SectorFeed" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PriceChange" ColumnName="PriceChange" />
+          <ScalarProperty Name="MarketCapitalization" ColumnName="MarketCapitalization" />
+          <ScalarProperty Name="PE" ColumnName="PE" />
+          <ScalarProperty Name="ROE" ColumnName="ROE" />
+          <ScalarProperty Name="DividendYield" ColumnName="DividendYield" />
+          <ScalarProperty Name="DebtToEquityRatio" ColumnName="DebtToEquityRatio" />
+          <ScalarProperty Name="PriceBook" ColumnName="PriceBook" />
+          <ScalarProperty Name="NetProfitMargin" ColumnName="NetProfitMargin" />
+          <ScalarProperty Name="PriceToFreeCashFlow" ColumnName="PriceToFreeCashFlow" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectors">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.Sector)">
+        <MappingFragment StoreEntitySet="Sectors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Feed" ColumnName="Feed" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.Stock)">
+        <MappingFragment StoreEntitySet="Stocks">
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ExchangeSymbol" ColumnName="ExchangeSymbol" />
+          <ScalarProperty Name="IndustryId" ColumnName="IndustryId" />
+          <ScalarProperty Name="IndustrySectorFeed" ColumnName="IndustrySectorFeed" />
+          <ScalarProperty Name="SecurityTypeType" ColumnName="SecurityTypeType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exchanges">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.Exchange)">
+        <MappingFragment StoreEntitySet="Exchanges">
+          <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quotes">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.Quote)">
+        <MappingFragment StoreEntitySet="Quotes">
+          <ScalarProperty Name="Symobl" ColumnName="Symobl" />
+          <ScalarProperty Name="RecordDate" ColumnName="RecordDate" />
+          <ScalarProperty Name="BookValue" ColumnName="BookValue" />
+          <ScalarProperty Name="DividendShare" ColumnName="DividendShare" />
+          <ScalarProperty Name="EarningsShare" ColumnName="EarningsShare" />
+          <ScalarProperty Name="EPSEstimateCurrentYear" ColumnName="EPSEstimateCurrentYear" />
+          <ScalarProperty Name="EPSEstimateNextYear" ColumnName="EPSEstimateNextYear" />
+          <ScalarProperty Name="EPSEstimateNextQuarter" ColumnName="EPSEstimateNextQuarter" />
+          <ScalarProperty Name="YearLow" ColumnName="YearLow" />
+          <ScalarProperty Name="YearHigh" ColumnName="YearHigh" />
+          <ScalarProperty Name="MarketCapitalization" ColumnName="MarketCapitalization" />
+          <ScalarProperty Name="EBITDA" ColumnName="EBITDA" />
+          <ScalarProperty Name="PercentChangeFromTwoHundreddayMovingAverage" ColumnName="PercentChangeFromTwoHundreddayMovingAverage" />
+          <ScalarProperty Name="PercentChangeFromFiftydayMovingAverage" ColumnName="PercentChangeFromFiftydayMovingAverage" />
+          <ScalarProperty Name="PriceSales" ColumnName="PriceSales" />
+          <ScalarProperty Name="PriceBook" ColumnName="PriceBook" />
+          <ScalarProperty Name="PERatio" ColumnName="PERatio" />
+          <ScalarProperty Name="PEGRatio" ColumnName="PEGRatio" />
+          <ScalarProperty Name="PriceEPSEstimateCurrentYear" ColumnName="PriceEPSEstimateCurrentYear" />
+          <ScalarProperty Name="PriceEPSEstimateNextYear" ColumnName="PriceEPSEstimateNextYear" />
+          <ScalarProperty Name="ShortRatio" ColumnName="ShortRatio" />
+          <ScalarProperty Name="OneyrTargetPrice" ColumnName="OneyrTargetPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StagingStocks">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.StagingStock)">
+        <MappingFragment StoreEntitySet="StagingStocks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="symbol" ColumnName="symbol" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="exch" ColumnName="exch" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="exchDisp" ColumnName="exchDisp" />
+          <ScalarProperty Name="typeDisp" ColumnName="typeDisp" />
+          <ScalarProperty Name="recordDate" ColumnName="recordDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecurityTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(StockScreener.Model.SecurityType)">
+        <MappingFragment StoreEntitySet="SecurityTypes">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

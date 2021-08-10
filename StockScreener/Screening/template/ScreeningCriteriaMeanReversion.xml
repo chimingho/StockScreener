@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreeningCriteria name="Mean Reversion">
+  <!-- Set basic screen criteria-->
+  <Basic enable="true">
+    <BookValue low="" high="" formula="" order=""></BookValue>
+    <DividendShare low="0" high="" formula="" order=""></DividendShare>
+    <EarningsShare low="" high="" formula="" order=""></EarningsShare>
+    <EPSEstimateCurrentYear low="" high="" formula="" order=""></EPSEstimateCurrentYear>
+    <EPSEstimateNextYear low="" high="" formula="" order=""></EPSEstimateNextYear>
+    <EPSEstimateNextQuarter low="" high="" formula="" order=""></EPSEstimateNextQuarter>
+    <MarketCapitalization low="" high="" formula="" order=""></MarketCapitalization>
+    <EBITDA low="" high="" formula="" order=""></EBITDA>
+    <PercentChangeFromYearLow low="" high="" formula="" order=""></PercentChangeFromYearLow>
+    <PercebtChangeFromYearHigh low="" high="" formula="" order=""></PercebtChangeFromYearHigh>
+    <PercentChangeFromTwoHundreddayMovingAverage low="" high="" formula="" order=""></PercentChangeFromTwoHundreddayMovingAverage>
+    <PercentChangeFromFiftydayMovingAverage low="" high="" formula="" order=""></PercentChangeFromFiftydayMovingAverage>
+    <PriceSales low="" high="" formula="" order=""></PriceSales>
+    <PriceBook low="" high="" formula="" order=""></PriceBook>
+    <PERatio low="" high="" formula="" order=""></PERatio>
+    <PEGRatio low="" high="" formula="" order=""></PEGRatio>
+    <PriceEPSEstimateCurrentYear low="" high="" formula="" order=""></PriceEPSEstimateCurrentYear>
+    <PriceEPSEstimateNextYear low="" high="" formula="" order=""></PriceEPSEstimateNextYear>
+    <ShortRatio low="" high="" formula="" order=""></ShortRatio>
+    <PercentChange low="" high="" formula="" order=""></PercentChange>
+  </Basic>
+
+  <!-- Set derived screen criteria-->
+  <Derived enable="true">
+    <Rule low="" high="" formula="PercentChangeFromTwoHundreddayMovingAverage &#60; 0" order=""></Rule>
+    <Rule low="" high="" formula="PercentChangeFromFiftydayMovingAverage &#60; 0" order=""></Rule>
+  </Derived>
+
+
+</ScreeningCriteria>

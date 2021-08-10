@@ -1,0 +1,5 @@
+2013-10-20 23:55:12,683 [10] FATAL HoAssetManagement.StockScreener.Program - test
+2013-10-20 23:55:12,704 [10] ERROR HoAssetManagement.StockScreener.Program - test
+2013-10-20 23:55:12,704 [10] WARN HoAssetManagement.StockScreener.Program - test
+2013-10-20 23:55:12,704 [10] INFO HoAssetManagement.StockScreener.Program - test
+2013-10-20 23:55:12,817 [10] INFO HoAssetManagement.StockScreener.Feed.YahooWebService - query string:92

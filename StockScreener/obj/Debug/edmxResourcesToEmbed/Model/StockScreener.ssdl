@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StockScreener.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="StockScreenerModelStoreContainer">
+    <EntitySet Name="Industries" EntityType="StockScreener.Model.Store.Industries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sectors" EntityType="StockScreener.Model.Store.Sectors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stocks" EntityType="StockScreener.Model.Store.Stocks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Exchanges" EntityType="StockScreener.Model.Store.Exchanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Quotes" EntityType="StockScreener.Model.Store.Quotes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StagingStocks" EntityType="StockScreener.Model.Store.StagingStocks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SecurityTypes" EntityType="StockScreener.Model.Store.SecurityTypes" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ExchangeStock" Association="StockScreener.Model.Store.ExchangeStock">
+      <End Role="Exchange" EntitySet="Exchanges" />
+      <End Role="Stock" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="SectorIndustry" Association="StockScreener.Model.Store.SectorIndustry">
+      <End Role="Sector" EntitySet="Sectors" />
+      <End Role="Industry" EntitySet="Industries" />
+    </AssociationSet>
+    <AssociationSet Name="IndustryStock" Association="StockScreener.Model.Store.IndustryStock">
+      <End Role="Industry" EntitySet="Industries" />
+      <End Role="Stock" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="StockSecurityType" Association="StockScreener.Model.Store.StockSecurityType">
+      <End Role="Stock" EntitySet="Stocks" />
+      <End Role="SecurityType" EntitySet="SecurityTypes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Industries">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="SectorFeed" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PriceChange" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="MarketCapitalization" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PE" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="ROE" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="DividendYield" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="DebtToEquityRatio" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceBook" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="NetProfitMargin" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceToFreeCashFlow" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="SectorId" Type="int" Nullable="true" />
+    <Property Name="SectorFeed" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Sectors">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Feed" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Feed" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="Symbol" />
+    </Key>
+    <Property Name="Symbol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExchangeSymbol" Type="nvarchar" Nullable="true" MaxLength="10" />
+    <Property Name="IndustryId" Type="int" Nullable="true" />
+    <Property Name="IndustrySectorFeed" Type="nvarchar" Nullable="true" MaxLength="20" />
+    <Property Name="SecurityTypeType" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Exchanges">
+    <Key>
+      <PropertyRef Name="Symbol" />
+    </Key>
+    <Property Name="Symbol" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Quotes">
+    <Key>
+      <PropertyRef Name="Symobl" />
+      <PropertyRef Name="RecordDate" />
+    </Key>
+    <Property Name="Symobl" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="RecordDate" Type="datetime" Nullable="false" />
+    <Property Name="BookValue" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="DividendShare" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="EarningsShare" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="EPSEstimateCurrentYear" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="EPSEstimateNextYear" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="EPSEstimateNextQuarter" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="YearLow" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="YearHigh" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="MarketCapitalization" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="EBITDA" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PercentChangeFromTwoHundreddayMovingAverage" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PercentChangeFromFiftydayMovingAverage" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceSales" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceBook" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PERatio" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PEGRatio" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceEPSEstimateCurrentYear" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="PriceEPSEstimateNextYear" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="ShortRatio" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+    <Property Name="OneyrTargetPrice" Type="decimal" Nullable="true" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="StagingStocks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="symbol" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="name" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="exch" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="type" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="exchDisp" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="typeDisp" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="recordDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SecurityTypes">
+    <Key>
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <Association Name="ExchangeStock">
+    <End Role="Exchange" Type="StockScreener.Model.Store.Exchanges" Multiplicity="0..1" />
+    <End Role="Stock" Type="StockScreener.Model.Store.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exchange">
+        <PropertyRef Name="Symbol" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="ExchangeSymbol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SectorIndustry">
+    <End Role="Sector" Type="StockScreener.Model.Store.Sectors" Multiplicity="0..1" />
+    <End Role="Industry" Type="StockScreener.Model.Store.Industries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sector">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="Feed" />
+      </Principal>
+      <Dependent Role="Industry">
+        <PropertyRef Name="SectorId" />
+        <PropertyRef Name="SectorFeed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IndustryStock">
+    <End Role="Industry" Type="StockScreener.Model.Store.Industries" Multiplicity="0..1" />
+    <End Role="Stock" Type="StockScreener.Model.Store.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="Id" />
+        <PropertyRef Name="SectorFeed" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="IndustryId" />
+        <PropertyRef Name="IndustrySectorFeed" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StockSecurityType">
+    <End Role="Stock" Type="StockScreener.Model.Store.Stocks" Multiplicity="*" />
+    <End Role="SecurityType" Type="StockScreener.Model.Store.SecurityTypes" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="SecurityType">
+        <PropertyRef Name="Type" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="SecurityTypeType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
